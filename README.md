@@ -4,6 +4,10 @@
 
 [GlusterFS](https://www.gluster.org/) es un sistema de archivos en red escalable y distribuído, definido para ser utilizado en el espacio de usuario, es decir, sin utilizar el espacio de almacenamiento crítico del sistema, y de esta forma no compromete el rendimiento. 
 
+* Gluster es una forma sencilla de aprovisionar su propio backend de almacenamiento NAS utilizando casi cualquier hardware que elija.
+* La recuperación de errores (failover) se hace de forma automática, de modo que si un servidor se cae, no se pierde el acceso a los datos. Cuando se recupera el servidor que ha fallado no hay que hacer nada para recuperar los datos, excepto esperar. Mientras tanto, la copia más actual de los datos se sigue sirviendo desde los nodos que estaban operativos.
+* Se puede acceder a los datos de Gluster desde los clientes tradicionales NFS, SMB/CIFS o usando el cliente nativo.
+
 Ventajas:
 
 * **Simplicidad**: Es fácil de utilizar y al ser ejecutado en el espacio de usuario es independiente del núcleo.
@@ -214,6 +218,8 @@ root@cliente:~# mount -t glusterfs nodo1:/gv0 /mnt
 root@cliente:~# cd /mnt/
 root@cliente:/mnt# ls
 ```
+
+¿Qué pasa si un nodo del cluster se apaga? Desde el cliente se sigue accediendo a la información del cluster. Podemos apagar un nodo y volvemos a comprobar que tenemos acceso a los ficheros.
 
 ## Conclusiones
 
