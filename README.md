@@ -1,5 +1,7 @@
 # Taller glusterfs
 
+* [Presentación](https://raw.githubusercontent.com/josedom24/presentaciones/main/hlc/glusterfs.pdf)
+
 ## Definiciones
 
 [GlusterFS](https://www.gluster.org/) es un sistema de archivos en red escalable y distribuído, definido para ser utilizado en el espacio de usuario, es decir, sin utilizar el espacio de almacenamiento crítico del sistema, y de esta forma no compromete el rendimiento. 
